@@ -3,7 +3,7 @@ const controller = require('../controller/controller');
 const auth = require('../middleware/auth')
 
 router.get('/', (req, res) => {
-    res.redirect('login')
+    res.redirect('/login')
 })
 router.post('/register', controller.registerUser);
 router.post('/login', controller.login);
