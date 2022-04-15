@@ -13,6 +13,10 @@ app.use(cors());
 // database connection
 connect();
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('../build'))
+}
+
 // routes
 app.use('/api', require('./router/router'));
 
