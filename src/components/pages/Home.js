@@ -27,7 +27,7 @@ export default function Home() {
             <Header></Header>
             <main>
                 <div className="container-fluid h-40">
-                    <h4>Welcome to Home Page</h4>
+                    <h4 className='text-center align-middle'>“The true teachers are those who help us think for ourselves."</h4>
                 </div>
                 <div className='container text-center'>
                     <Link className="nav-brand" to="/Course">

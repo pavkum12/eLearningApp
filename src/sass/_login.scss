@@ -40,7 +40,7 @@
                 >.nav-brand {
                     font-size: 22px;
                     @extend .font-bold;
-                    color: #505050;
+                    color: white;
                 }
             }
 
@@ -58,8 +58,9 @@
                 }
 
                 .link-btn.active {
-                    background: rgb(255, 255, 255);
-                    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(174, 94, 3, 1) 86%);
+                    background: rgb(198, 119, 0);
+                    background: linear-gradient(90deg, rgba(198, 119, 0, 1) 70%, rgba(255, 255, 255, 1) 100%);
+                    color: whitesmoke;
                 }
 
                 >.btn-primary {
@@ -150,7 +151,7 @@
 
             .primary-btn {
                 background: rgb(255, 255, 255);
-                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(174, 94, 3, 1) 66%);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(198, 119, 0, 1) 40%);
                 @extend .width-100;
                 border: none;
                 color: #fff;
@@ -200,5 +201,27 @@
 
 .h-40 {
     height: 40vh;
-    background-color: #505050;
+
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://www.itl.cat/pngfile/big/149-1491781_tg-wallpaper.jpg) top left repeat;
+    background-size: cover;
+
+    color: #fff;
+
+    @keyframes slideFromTop {
+        0% {
+            transform: translateY(-300%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+
+    >h4 {
+        animation: slideFromTop 1s ease-out 0.6s 1;
+        top: auto;
+        padding-top: 3em;
+    }
+
 }
