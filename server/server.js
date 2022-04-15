@@ -19,7 +19,20 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // routes
-app.use('/api', require('./router/router'));
+// app.use('/api', require('./router/router'));
+const router = require('express').Router()
+
+const controller = require('./controller/controller');
+const auth = require('./middleware/auth')
+
+console.log("in Router");
+app.post('/api/register', controller.registerUser);
+app.post('/api/login', controller.login);
+app.post('/api/adminlogin', controller.adminlogin);
+app.delete('/api/delete', auth, controller.delete);
+app.get('/api', (req, res) => {
+    res.send("Welcome")
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
