@@ -30,7 +30,7 @@ app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
 app.post('/api/adminlogin', controller.adminlogin);
 app.delete('/api/delete', auth, controller.delete);
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile('../build/')
 })
 
