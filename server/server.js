@@ -1,6 +1,7 @@
 const express = require('express')
 const connect = require('./database/connection')
 const cors = require('cors');
+const path = require('path')
 
 require('dotenv').config({ path: "./config.env" });
 const PORT = process.env.PORT || 8080;
