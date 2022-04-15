@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "http://localhost:4000/api";
+const baseURL = "https://my-elearning-app136.herokuapp.com/api";
 
 // register request
 const register = (newUser) => {
