@@ -14,7 +14,8 @@ app.use(cors());
 connect();
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('../build'))
+    console.log("in production");
+    app.use(express.static('../build/'))
 }
 
 // routes
