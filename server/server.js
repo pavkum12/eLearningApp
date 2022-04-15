@@ -21,5 +21,5 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api', require('./router/router'));
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:4000`);
+    // console.log(`Server is running on http://localhost:4000`);
 })
