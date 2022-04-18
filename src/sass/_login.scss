@@ -58,8 +58,7 @@
                 }
 
                 .link-btn.active {
-                    background: rgb(198, 119, 0);
-                    background: linear-gradient(90deg, rgba(198, 119, 0, 1) 70%, rgba(255, 255, 255, 1) 100%);
+                    background: #66330088;
                     color: whitesmoke;
                 }
 
@@ -203,9 +202,8 @@
 .h-40 {
     height: 40vh;
 
-    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://www.itl.cat/pngfile/big/149-1491781_tg-wallpaper.jpg) top left repeat;
+    background: linear-gradient(180deg, rgb(47, 47, 135) 0%, rgba(32, 15, 218, 0.384) 100%), url(https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_960_720.jpg) top left repeat;
     background-size: cover;
-
     color: #fff;
 
     @keyframes slideFromTop {
@@ -224,5 +222,64 @@
         top: auto;
         padding-top: 3em;
     }
+}
+
+.button1 {
+    font-size: 20px;
+    padding: 140px 60px;
+    border-radius: 5px;
+    margin: 10px 10px;
+    transition: 1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://i.pinimg.com/originals/d0/1a/62/d01a620151ce09907e581d322590f8a6.jpg) top left repeat;
+    background-repeat: no-repeat;
+    background-size: 200px 320px;
+    color: #fff;
+    border: #fff;
+}
+
+// .button1:hover {
+//     transform: scale(1.1);
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+// }
+
+.button2 {
+    font-size: 20px;
+    padding: 140px 60px;
+    border-radius: 5px;
+    margin: 10px 10px;
+    transition: 1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://cdn.pixabay.com/photo/2015/02/05/11/07/news-624859_960_720.png) top left repeat;
+    background-repeat: no-repeat;
+    background-size: 175px 320px;
+    color: #fff;
+    border: #fff;
+}
+
+// .button2:hover {
+//     transform: scale(1.1);
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+// }
+
+.button3 {
+    font-size: 20px;
+    padding: 140px 60px;
+    border-radius: 5px;
+    margin: 10px 10px;
+    transition: 1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://media.istockphoto.com/vectors/laptop-with-envelope-and-document-on-screen-new-email-on-the-laptop-vector-id1299764624?k=20&m=1299764624&s=612x612&w=0&h=9_WeP3gTW69fwt0q8bm-Fq5yLrPBRdADs33QWFYrt0s=) top left repeat;
+    background-repeat: no-repeat;
+    background-size: 200px 320px;
+    color: #fff;
+    border: #fff;
+}
+
+.button3:hover,
+.button2:hover,
+.button1:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 
 }

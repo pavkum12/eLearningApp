@@ -5,6 +5,7 @@ import Header from '../imports/Header';
 import { useSelector } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
 
+
 export default function Home() {
 
     const user = useSelector(state => state.isLoggedIn);
@@ -31,13 +32,13 @@ export default function Home() {
                 </div>
                 <div className='container text-center'>
                     <Link className="nav-brand" to="/Course">
-                        <button className="btn btn-primary">Courses</button>
+                        <button className="button1">Courses</button>
                     </Link>
                     <Link className="nav-brand" to="/News">
-                        <button className="btn btn-primary">News</button>
+                        <button className="button2">News</button>
                     </Link>
                     <Link className="nav-brand" to="/Updates">
-                        <button className="btn btn-primary">Updates</button>
+                        <button className="button3">Updates</button>
                     </Link>
                 </div>
             </main>
