@@ -1,6 +1,6 @@
-const mongose = require('mongoose');
 
-const userSchema = new mongose.Schema({
+const mongose = require('mongoose');
+const adminSchema = new mongose.Schema({
     email: {
         type: String,
         unique: true,
@@ -15,5 +15,4 @@ const userSchema = new mongose.Schema({
         type: String
     }
 })
-
-module.exports = User = mongose.model('admin', userSchema)
+module.exports = Admin = mongose.model('admin', adminSchema)

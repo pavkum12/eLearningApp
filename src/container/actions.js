@@ -47,25 +47,26 @@ export const loginAction = (userCredential) => (dispatch) => {
             return Promise.reject(error)
         })
 }
-// export const adminLoginAction = (userCredential) => (dispatch) => {
-//     return AuthService.adminLogin(userCredential)
-//         .then(data => {
-//             console.log("Logging-3");
-//             dispatch({
-//                 type: actionType.LOGIN_SUCCESS,
-//                 payload: data
-//             })
-//             return Promise.resolve(data)
-//         })
-//         .catch(error => {
-//             console.log("Logging -2 -error");
-//             dispatch({
-//                 type: actionType.REGISTER_FAIL,
-//                 payload: { err: error.message || "Login Failed" }
-//             })
-//             return Promise.reject(error)
-//         })
-// }
+export const adminLoginAction = (userCredential) => (dispatch) => {
+    console.log("In admin Login Action");
+    return AuthService.adminLogin(userCredential)
+        .then(data => {
+            console.log("Logging-3");
+            dispatch({
+                type: actionType.LOGIN_SUCCESS,
+                payload: data
+            })
+            return Promise.resolve(data)
+        })
+        .catch(error => {
+            console.log("Logging -2 -error");
+            dispatch({
+                type: actionType.REGISTER_FAIL,
+                payload: { err: error.message || "Login Failed" }
+            })
+            return Promise.reject(error)
+        })
+}
 
 // logout action
 export const logoutAction = () => (dispatch) => {

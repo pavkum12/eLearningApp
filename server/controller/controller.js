@@ -1,7 +1,8 @@
 const bcrypt = require('bcrypt');
 const User = require('../model/schema');
-const Admin = require('../model/adminSchema')
+const Admin = require('../model/admin')
 const jwt = require('jsonwebtoken');
+const { Mongoose } = require('mongoose');
 
 // controller for register
 exports.registerUser = async (req, res) => {
@@ -43,7 +44,7 @@ exports.registerUser = async (req, res) => {
     } catch (error) {
         res.status(500).json({ err: error.message || "Error while registration" })
     }
-}
+};
 
 // controller for login
 exports.login = async (req, res) => {
@@ -81,37 +82,33 @@ exports.login = async (req, res) => {
         res.status(500).json({ err: error.message || "Error while Login" })
     }
 };
-exports.adminlogin = async (req, res) => {
+
+exports.admin = async (req, res) => {
 
     try {
-        console.log(Admin.find(), "Mylogging");
-        // validate request
+        console.log("In admin controller");
         if (!req.body) {
             res.status(406).json({ err: "You have to fill the email and password" })
             return;
         }
-
-        // get user data
         const { email, password } = req.body
-
-        // validation
         if (!email || !password)
             return res.status(406).json({ err: "Not all fields have been entered" })
 
-        const user = await Admin.findOne({ email });
-
-        if (!user)
+        console.log(email + " " + password);
+        const admin = await Admin.findOne({ email });
+        console.log(admin);
+        if (!admin) {
             return res.status(406).json({ err: "No account with this email." })
-
+        }
         // compare the password
-        const isMatch = await bcrypt.compare(password, user.password);
-
+        const isMatch = await bcrypt.compare(password, admin.password);
         if (!isMatch) return res.status(406).json({ err: "Invalid Credentials" });
 
         // create jwt token
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
+        const token = jwt.sign({ id: admin._id }, process.env.JWT_SECRET)
+        res.json({ token, username: admin.username, email: admin.email })
 
-        res.json({ token, username: user.username, email: user.email })
 
     } catch (error) {
         res.status(500).json({ err: error.message || "Error while Login" })
@@ -127,3 +124,5 @@ exports.delete = async (req, res) => {
         res.status(500).json({ err: error.message || "Error while deleting user" })
     }
 }
+
+

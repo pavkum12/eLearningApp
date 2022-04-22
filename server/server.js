@@ -30,8 +30,9 @@ app.use(express.static(path.join(__dirname, "../build")))
 console.log("in Router");
 app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
-app.post('/api/adminlogin', controller.adminlogin);
+app.post('/api/admin', controller.admin);
 app.delete('/api/delete', auth, controller.delete);
+
 
 
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "https://my-elearning-app136.herokuapp.com/api";
+const baseURL = "http://localhost:4000/api";
 
 // register request
 const register = (newUser) => {
@@ -32,21 +32,21 @@ const login = async (userCredential) => {
     }
 }
 
-// const adminLogin = (userCredential) => {
-//     console.log("Mylogging");
-//     return axios.post(`${baseURL}/adminlogin`, userCredential)
-//         .then(response => {
-//             console.log("Mylogging");
-//             if (response.data.token) {
-//                 localStorage.setItem("x-access-token", response.data.token)
-//             }
-//             return Promise.resolve(response.data)
-//         })
-//         .catch(error => {
-//             console.log("Mylogging - error" + error);
-//             return Promise.reject(error.response.data)
-//         })
-// }
+const adminLogin = async (userCredential) => {
+    console.log("In Auth Service");
+    return axios.post(`${baseURL}/admin`, userCredential)
+        .then(response => {
+            console.log("Log in auth service success");
+            if (response.data.token) {
+                localStorage.setItem("x-access-token", response.data.token)
+            }
+            return Promise.resolve(response.data)
+        })
+        .catch(error => {
+            console.log("Auth service - error" + error);
+            return Promise.reject(error.response.data)
+        })
+}
 
 // logout service
 const logout = () => {
@@ -58,6 +58,6 @@ export {
     register,
     login,
     logout,
-    // adminLogin
+    adminLogin,
 }
 
