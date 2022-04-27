@@ -25,8 +25,8 @@ export default function Header() {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light primary-gradient shadow">
-                <Link className="nav-link brand mx-auto" to="/">
-                    <h5 className="text-light m-0">MERN Stack Application</h5>
+                <Link className="nav-link brand mx-auto">
+                    <h5 className="text-light m-0">Welcome  {localStorage.getItem('username') == null ? "Guest" : localStorage.getItem('username').charAt(0).toUpperCase() + localStorage.getItem('username').substring(1,)}</h5>
                 </Link>
                 <button className="navbar-toggler" type="button" onClick={myFunction} data-toggle="collapse" data-target="#navbarNav" aria-expanded="false">
                     <i className="fas fa-bars"></i>

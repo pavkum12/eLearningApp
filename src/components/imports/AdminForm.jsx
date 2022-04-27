@@ -7,7 +7,7 @@ export default function AdminForm(props) {
         <div className="col-sm-7  bg-color align-self-center">
             <div className="form-section">
                 <div className="title">
-                    <h3>Sign into your account</h3>
+                    <h3>Sign into your admin account</h3>
                 </div>
                 <div className="login-inner-form">
                     <form method="POST" onSubmit={handleSubmit}>

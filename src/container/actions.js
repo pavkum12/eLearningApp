@@ -1,6 +1,7 @@
 import * as actionType from './types';
 import * as AuthService from '../components/services/auth.service';
 
+
 // register action
 export const registerAction = (payload) => (dispatch) => {
     return AuthService.register(payload)
@@ -48,10 +49,10 @@ export const loginAction = (userCredential) => (dispatch) => {
         })
 }
 export const adminLoginAction = (userCredential) => (dispatch) => {
-    console.log("In admin Login Action");
+
     return AuthService.adminLogin(userCredential)
         .then(data => {
-            console.log("Logging-3");
+
             dispatch({
                 type: actionType.LOGIN_SUCCESS,
                 payload: data
@@ -81,5 +82,79 @@ export const logoutAction = () => (dispatch) => {
     }
     catch (err) {
         return Promise.resolve(err)
+    }
+}
+
+export const addCourseAction = (courseContent) => async (dispatch) => {
+    try {
+        return AuthService.addCourseFunction(courseContent)
+            .then(data => {
+
+                dispatch({
+                    type: actionType.ADDCOURSE,
+                    payload: { data }
+                })
+                return Promise.resolve(data)
+            })
+            .catch(error => {
+                console.log("Action Error =>" + error.message);
+                dispatch({
+
+                    payload: { err: error.message || "Add Failed" }
+                })
+                return Promise.reject(error)
+            })
+
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+export const getCourseAction = () => async (dispatch) => {
+    try {
+        return AuthService.getCourseFunction().then(data => {
+            dispatch({
+                type: actionType.GETCOURSE,
+                payload: { data }
+            })
+            return Promise.resolve(data)
+        })
+            .catch(err => {
+                console.log("GET course error ->", err);
+                dispatch({
+
+                    payload: { err: err.message || "Get Failed" }
+                })
+                return Promise.reject(err)
+            })
+    } catch (error) {
+
+    }
+}
+
+export const addUpdateAction = (updateContent) => async (dispatch) => {
+    try {
+        return AuthService.addUpdateFunction(updateContent)
+            .then(data => {
+
+                dispatch({
+                    type: actionType.ADDUPDATE,
+                    payload: { data }
+                })
+                return Promise.resolve(data)
+            })
+            .catch(error => {
+                console.log("Action Error =>" + error.message);
+                dispatch({
+
+                    payload: { err: error.message || "Add Failed" }
+                })
+                return Promise.reject(error)
+            })
+
+    }
+    catch (err) {
+        console.log(err);
     }
 }

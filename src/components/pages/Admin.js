@@ -4,7 +4,6 @@ import BaseLogin from '../imports/BaseLogin';
 import AdminForm from '../imports/AdminForm';
 
 import { useDispatch, useStore } from 'react-redux';
-import { loginAction } from '../../container/actions'
 import { adminLoginAction } from '../../container/actions';
 import { useHistory } from 'react-router-dom';
 
@@ -31,7 +30,7 @@ export default function Admin() {
         // const userdata = { email: "dmin@gmail.com", password : "admin123"}
         const login = dispatch(adminLoginAction(userCredential))
         login
-            .then(data => history.push('/adminDashboard'))
+            .then(data => history.push('/AdminDashboard'))
             .catch(error => setError(error.err))
 
         // console.log(store.getState())

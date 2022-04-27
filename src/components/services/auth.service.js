@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 const baseURL = "http://localhost:4000/api";
 
 // register request
@@ -24,6 +25,8 @@ const login = async (userCredential) => {
         if (response.data.token) {
             console.log("Mylogging");
             localStorage.setItem("x-access-token", response.data.token);
+
+            localStorage.setItem('username', response.data.username)
         }
         return await Promise.resolve(response.data);
     } catch (error) {
@@ -33,12 +36,14 @@ const login = async (userCredential) => {
 }
 
 const adminLogin = async (userCredential) => {
-    console.log("In Auth Service");
+
     return axios.post(`${baseURL}/admin`, userCredential)
         .then(response => {
-            console.log("Log in auth service success");
+
             if (response.data.token) {
                 localStorage.setItem("x-access-token", response.data.token)
+                localStorage.setItem('username', response.data.username)
+
             }
             return Promise.resolve(response.data)
         })
@@ -51,7 +56,37 @@ const adminLogin = async (userCredential) => {
 // logout service
 const logout = () => {
     localStorage.removeItem('x-access-token')
+    localStorage.removeItem('username')
     return { msg: "Logout Successfully...!" }
+}
+
+const addCourseFunction = async (courseDetail) => {
+    // console.log(courseDetail);
+    return axios.post(`${baseURL}/addCourse`, courseDetail).then(response => {
+        return Promise.resolve(response.data)
+    }).catch(error => {
+        console.log(error);
+        return Promise.reject(error.response.data)
+    })
+}
+const addUpdateFunction = async (updateContent) => {
+    // console.log(updateContent);
+    return axios.post(`${baseURL}/addUpdate`, updateContent).then(response => {
+        return Promise.resolve(response.data)
+    }).catch(error => {
+        console.log(error);
+        return Promise.reject(error.response.data)
+    })
+}
+
+const getCourseFunction = async () => {
+    return axios.get(`${baseURL}/getCourse`)
+        .then(response => {
+            return Promise.resolve(response.data)
+        }).catch(error => {
+            console.log(`Service error ->> ${error}`);
+            return Promise.reject(error.response.data)
+        })
 }
 
 export {
@@ -59,5 +94,8 @@ export {
     login,
     logout,
     adminLogin,
+    addCourseFunction,
+    getCourseFunction,
+    addUpdateFunction,
 }
 

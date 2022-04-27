@@ -7,8 +7,6 @@ app.post('/register', controller.registerUser);
 app.post('/login', controller.login);
 app.post('/admin', controller.admin)
 app.delete('/delete', auth, controller.delete);
-app.get('/', (req, res) => {
-    res.send("Welcome")
-})
+
 
 module.exports = router;

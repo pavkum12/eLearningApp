@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5em;
     @extend .position-relative;
     @extend .text-center;
 
@@ -150,23 +151,23 @@
             }
 
             .primary-btn {
-                background: rgb(255, 255, 255);
-                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(198, 119, 0, 1) 40%);
                 @extend .width-100;
                 border: none;
-                color: #fff;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
                 padding: 10px 30px 9px 30px;
                 cursor: pointer;
                 height: 45px;
                 border-radius: 50px;
                 margin-top: 20px;
-
+                transition: 0.5s;
+                color: white;
+                background: linear-gradient(315deg, #c07200, #a16000);
+                box-shadow: 9px 9px 17px #f3f1ee,
+                    -5px -5px 17px #c37500;
 
                 &:hover {
-                    background: rgb(255, 255, 255);
-                    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(174, 94, 3, 1) 41%);
 
+                    box-shadow: -9px -9px 17px #f3f1ee,
+                        5px 5px 17px #c37500;
                 }
             }
 
@@ -224,62 +225,228 @@
     }
 }
 
-.button1 {
+#button1 {
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://i.pinimg.com/originals/d0/1a/62/d01a620151ce09907e581d322590f8a6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#button2 {
+
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://cdn.pixabay.com/photo/2015/02/05/11/07/news-624859_960_720.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#button3 {
+
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://media.istockphoto.com/vectors/laptop-with-envelope-and-document-on-screen-new-email-on-the-laptop-vector-id1299764624?k=20&m=1299764624&s=612x612&w=0&h=9_WeP3gTW69fwt0q8bm-Fq5yLrPBRdADs33QWFYrt0s=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main-menu {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    width: 20vw;
     font-size: 20px;
     padding: 140px 60px;
     border-radius: 5px;
-    margin: 10px 10px;
+    margin: 10px 15px;
     transition: 1s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://i.pinimg.com/originals/d0/1a/62/d01a620151ce09907e581d322590f8a6.jpg) top left repeat;
-    background-repeat: no-repeat;
-    background-size: 200px 320px;
     color: #fff;
     border: #fff;
+    margin-top: 2em;
+
+
+
 }
 
-// .button1:hover {
-//     transform: scale(1.1);
-//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-// }
-
-.button2 {
-    font-size: 20px;
-    padding: 140px 60px;
-    border-radius: 5px;
-    margin: 10px 10px;
-    transition: 1s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://cdn.pixabay.com/photo/2015/02/05/11/07/news-624859_960_720.png) top left repeat;
-    background-repeat: no-repeat;
-    background-size: 175px 320px;
-    color: #fff;
-    border: #fff;
-}
-
-// .button2:hover {
-//     transform: scale(1.1);
-//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-// }
-
-.button3 {
-    font-size: 20px;
-    padding: 140px 60px;
-    border-radius: 5px;
-    margin: 10px 10px;
-    transition: 1s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://media.istockphoto.com/vectors/laptop-with-envelope-and-document-on-screen-new-email-on-the-laptop-vector-id1299764624?k=20&m=1299764624&s=612x612&w=0&h=9_WeP3gTW69fwt0q8bm-Fq5yLrPBRdADs33QWFYrt0s=) top left repeat;
-    background-repeat: no-repeat;
-    background-size: 200px 320px;
-    color: #fff;
-    border: #fff;
-}
-
-.button3:hover,
-.button2:hover,
-.button1:hover {
+.menu-button:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
 
+#add-cource {
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://i.pinimg.com/originals/d0/1a/62/d01a620151ce09907e581d322590f8a6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#add-admin {
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://cdn.pixabay.com/photo/2015/02/05/11/07/news-624859_960_720.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#update {
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://media.istockphoto.com/vectors/laptop-with-envelope-and-document-on-screen-new-email-on-the-laptop-vector-id1299764624?k=20&m=1299764624&s=612x612&w=0&h=9_WeP3gTW69fwt0q8bm-Fq5yLrPBRdADs33QWFYrt0s=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width:768px) {
+    .menu-button {
+        width: 80vw;
+    }
+
+    .add-cource {
+        width: 80vw;
+    }
+
+    .add-update {
+        width: 80vw;
+    }
+
+
+}
+
+@media(min-width:1080px) {
+    .add-cource {
+        width: 50vw;
+    }
+
+    .add-update {
+        width: 50vw;
+    }
+
+    .add-update #title {
+        width: 45vw;
+    }
+}
+
+.add-cource {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding: 2em;
+    border-radius: 25px;
+    background: #eeeeee;
+    box-shadow: 20px 20px 60px #cacaca,
+        -20px -20px 60px #ffffff;
+}
+
+.add-update {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding: 2em;
+    border-radius: 25px;
+    background: #eeeeee;
+    box-shadow: 20px 20px 60px #cacaca,
+        -20px -20px 60px #ffffff;
+}
+
+.input-text {
+    padding: 0.3em;
+    // margin: 0.5em;
+    border-radius: 15px;
+
+}
+
+.form-group {
+    margin: 0.25em;
+}
+
+.btn-add-cource {
+    border: 0px solid black;
+    padding: 0.5em;
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+}
+
+.btn-add-update {
+    border: 0px solid black;
+    padding: 0.5em;
+    margin-top: 1em;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+    
+
+}
+
+.btn-add-update:hover {
+    // background: rgb(178, 126, 213);
+
+    color: #fff;
+    // background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+    box-shadow: 13px 13px 26px #cbcbcb,
+        -13px -13px 26px #efefef;
+}
+
+.btn-add-cource:hover {
+    // background: rgb(178, 126, 213);
+
+    color: #fff;
+    // background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+    box-shadow: 13px 13px 26px #cbcbcb,
+        -13px -13px 26px #efefef;
+}
+
+.btn-add-cource0 {
+    padding: 0.5em;
+    border-radius: 2em;
+    color: #ebe9e9;
+    background: rgb(178, 126, 213);
+    background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+}
+
+
+.card {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #c6c4c4, #ebe9e9);
+    box-shadow: 13px 13px 40px #cdcbcb,
+        -13px -13px 40px #ebe9e9;
+    margin: 0.5em;
+    padding: 0.5em;
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #faf6f6, #d3cfcf);
+    box-shadow: 18px 18px 100px #a6a3a3,
+        -18px -18px 100px #ffffff;
+}
+
+.card-header {
+    background: #00000000;
+}
+
+.card-footer {
+    background: #00000000;
+}
+
+.card-body {
+    background: #00000000;
+    border: 0;
+}
+
+.row {
+    align-items: center;
+    justify-content: center;
+}
+
+.card-footer a {
+    text-decoration: none;
+    color: #ffffff;
 }

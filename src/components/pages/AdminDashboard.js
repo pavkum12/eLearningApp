@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
 
 
-export default function Home() {
+export default function AdminDashboard() {
 
     const user = useSelector(state => state.isLoggedIn);
     const history = useHistory()
@@ -27,18 +27,16 @@ export default function Home() {
         <>
             <Header></Header>
             <main>
-                <div className="container-fluid h-40">
-                    <h4 className='text-center align-middle'>“The true teachers are those who help us think for ourselves."</h4>
-                </div>
-                <div className='container  text-center'>
-                    <Link className="nav-brand" to="/Course">
-                        <button className="menu-button" id="button1">Courses</button>
+
+                <div className='container text-center main-menu'>
+                    <Link className="nav-brand" to="/AddCourse">
+                        <button className="menu-button" id='add-cource'>Add Courses</button>
                     </Link>
-                    <Link className="nav-brand" to="/News">
-                        <button className="menu-button" id="button2">News</button>
+                    <Link className="nav-brand" to="/AddAdmin">
+                        <button className="menu-button" id='add-admin'>Add Admin</button>
                     </Link>
-                    <Link className="nav-brand" to="/Updates">
-                        <button className="menu-button " id="button3">Updates</button>
+                    <Link className="nav-brand" to="/AddUpdates">
+                        <button className="menu-button" id='update'>Update</button>
                     </Link>
                 </div>
             </main>

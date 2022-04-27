@@ -32,6 +32,9 @@ app.post('/api/register', controller.registerUser);
 app.post('/api/login', controller.login);
 app.post('/api/admin', controller.admin);
 app.delete('/api/delete', auth, controller.delete);
+app.post('/api/addCourse', controller.addCourse);
+app.get('/api/getCourse', controller.getCourse);
+app.post('/api/addUpdate', controller.addUpdate);
 
 
 

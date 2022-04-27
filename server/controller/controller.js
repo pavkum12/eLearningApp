@@ -3,6 +3,8 @@ const User = require('../model/schema');
 const Admin = require('../model/admin')
 const jwt = require('jsonwebtoken');
 const { Mongoose } = require('mongoose');
+const Course = require('../model/course');
+const Update = require('../model/update')
 
 // controller for register
 exports.registerUser = async (req, res) => {
@@ -95,9 +97,9 @@ exports.admin = async (req, res) => {
         if (!email || !password)
             return res.status(406).json({ err: "Not all fields have been entered" })
 
-        console.log(email + " " + password);
+
         const admin = await Admin.findOne({ email });
-        console.log(admin);
+
         if (!admin) {
             return res.status(406).json({ err: "No account with this email." })
         }
@@ -126,3 +128,59 @@ exports.delete = async (req, res) => {
 }
 
 
+exports.addCourse = (req, res) => {
+    try {
+        const { title, description, category } = req.body
+
+        const addcourse = new Course({
+            title,
+            description,
+            category
+        });
+
+        addcourse.save(addcourse)
+            .then(addedCourse => {
+                res.json(addedCourse)
+            })
+            .catch(error => res.status(406).json({ err: error || "Error while adding course" }))
+
+
+    }
+    catch (err) {
+        res.status(500).json({ error: err || "Error in Add Course URL" })
+    }
+}
+exports.addUpdate = (req, res) => {
+    try {
+        const { noti } = req.body
+
+        const addUpdate = new Update({
+            noti,
+        });
+
+        addUpdate.save(addUpdate)
+            .then(addedCourse => {
+                res.json(addUpdate)
+            })
+            .catch(error => res.status(406).json({ err: error || "Error while adding course" }))
+
+
+    }
+    catch (err) {
+        res.status(500).json({ error: err || "Error in Add Course URL" })
+    }
+}
+
+exports.getCourse = (req, res) => {
+    try {
+        Course.find().then(course => {
+            if (!course) {
+                res.status(406).json({ msg: "No courses available" })
+            }
+            res.json({ courseList: course });
+        })
+
+    } catch (error) {
+        res.status(500).json({ error: error || "Cant get Courses" })
+    }
+}
