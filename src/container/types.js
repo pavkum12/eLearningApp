@@ -6,3 +6,4 @@ export const LOGOUT = "LOGOUT";
 export const ADDCOURSE = "ADDCOURSE";
 export const GETCOURSE = "GETCOURSE";
 export const ADDUPDATE = "ADDUPDATE";
+export const GETUPDATE = "GETUPDATE";

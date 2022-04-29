@@ -132,7 +132,27 @@ export const getCourseAction = () => async (dispatch) => {
 
     }
 }
+export const getUpdateAction = () => async (dispatch) => {
+    try {
+        return AuthService.getUpdateFunction().then(data => {
+            dispatch({
+                type: actionType.GETUPDATE,
+                payload: { data }
+            })
+            return Promise.resolve(data)
+        })
+            .catch(err => {
+                console.log("GET course error ->", err);
+                dispatch({
 
+                    payload: { err: err.message || "Get Failed" }
+                })
+                return Promise.reject(err)
+            })
+    } catch (error) {
+
+    }
+}
 export const addUpdateAction = (updateContent) => async (dispatch) => {
     try {
         return AuthService.addUpdateFunction(updateContent)

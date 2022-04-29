@@ -13,6 +13,12 @@ const courseSchema = new mongoose.Schema({
     },
     category: {
         type: String
+    },
+    fileUrl: {
+        type: String
+    },
+    imageUrl: {
+        type: String
     }
 })
 module.exports = Course = mongoose.model('course', courseSchema)

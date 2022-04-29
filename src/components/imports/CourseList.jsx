@@ -20,12 +20,6 @@ export default function CourseList(props) {
                         <td>{category}</td>
                     </tr>
                 </tbody>
-
-
-
-
-
-
             </table>
         </div >
 

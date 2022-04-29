@@ -32,11 +32,17 @@ export default function AdminDashboard() {
                     <Link className="nav-brand" to="/AddCourse">
                         <button className="menu-button" id='add-cource'>Add Courses</button>
                     </Link>
+                    <Link className="nav-brand" to="/RemoveCourse">
+                        <button className="menu-button" id='add-cource'>Remove Courses</button>
+                    </Link>
                     <Link className="nav-brand" to="/AddAdmin">
                         <button className="menu-button" id='add-admin'>Add Admin</button>
                     </Link>
                     <Link className="nav-brand" to="/AddUpdates">
-                        <button className="menu-button" id='update'>Update</button>
+                        <button className="menu-button" id='update'>Add Updates</button>
+                    </Link>
+                    <Link className="nav-brand" to="/RemoveUpdates">
+                        <button className="menu-button" id='update'>Remove Updates</button>
                     </Link>
                 </div>
             </main>

@@ -7,7 +7,7 @@ import axios from 'axios';
 const baseURL = "http://localhost:4000/api";
 
 
-class Course extends React.Component {
+class RemoveCourse extends React.Component {
     state = {
         title: "",
         desc: "",
@@ -48,7 +48,7 @@ class Course extends React.Component {
                         <p class="card-text">{item.description}</p>
                     </div >
                     <div className='card-footer border-0'>
-                        <a href={`${item.fileUrl}`} class="btn-add-cource0">View Material</a>
+                        <a href={`${item.fileUrl}`} class="btn-add-cource0">Delete course</a>
                     </div>
                 </div >
             )
@@ -56,13 +56,12 @@ class Course extends React.Component {
     }
 
 
-
     render() {
         return (
             <div>
                 <header>
                     <nav className="navbar navbar-expand-lg navbar-light primary-gradient shadow">
-                        <Link className="nav-link brand " to="/">
+                        <Link className="nav-link brand " to="/AdminDashboard">
                             <i className="fa-solid fa-square-caret-left text-white"></i>
                         </Link>
                         <h4 className='text-white mx-auto'>Here is the courses available</h4>
@@ -83,4 +82,4 @@ class Course extends React.Component {
     }
 }
 
-export default Course
+export default RemoveCourse

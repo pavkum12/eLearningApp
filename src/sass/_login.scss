@@ -22,7 +22,7 @@
 
         >.bg-img {
             padding: 0;
-            border-radius: 10px 0 0 10px;
+            // border-radius: 10px 0 0 10px;
             background: rgba(0, 0, 0, 0.04) url(https://www.itl.cat/pngfile/big/149-1491781_tg-wallpaper.jpg) top left repeat;
             background-size: cover;
             top: 0;
@@ -36,7 +36,7 @@
 
             >.logo {
                 text-align: left;
-                margin: 20px;
+                margin: 10px;
 
                 >.nav-brand {
                     font-size: 22px;
@@ -93,7 +93,7 @@
         @extend .width-100;
 
         >.title {
-            margin: 10px 0 50px 0;
+            margin: 0px 0 40px 0;
 
             >h3 {
                 font-size: 25px;
@@ -161,8 +161,8 @@
                 transition: 0.5s;
                 color: white;
                 background: linear-gradient(315deg, #c07200, #a16000);
-                box-shadow: 9px 9px 17px #f3f1ee,
-                    -5px -5px 17px #c37500;
+                // box-shadow: 9px 9px 17px #f3f1ee,
+                //     -5px -5px 17px #c37500;
 
                 &:hover {
 
@@ -258,9 +258,9 @@ main-menu {
 .menu-button {
     width: 20vw;
     font-size: 20px;
-    padding: 140px 60px;
+    padding: 110px 50px;
     border-radius: 5px;
-    margin: 10px 15px;
+    margin: 11px 15px;
     transition: 1s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -284,7 +284,7 @@ main-menu {
 }
 
 #add-admin {
-    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://cdn.pixabay.com/photo/2015/02/05/11/07/news-624859_960_720.png);
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.5) 0%, rgba(255, 0, 27, 0.5) 100%), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWo1PJwP2V9ZQzketb3HSL3WmkB91BLnJdzA&usqp=CAU);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -314,6 +314,10 @@ main-menu {
 }
 
 @media(min-width:1080px) {
+    .menu-button {
+        width: vw;
+    }
+
     .add-cource {
         width: 50vw;
     }
@@ -379,7 +383,7 @@ main-menu {
     border-radius: 25px;
     color: #fff;
     background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
-    
+
 
 }
 
@@ -413,8 +417,8 @@ main-menu {
 .card {
     border-radius: 50px;
     background: linear-gradient(145deg, #c6c4c4, #ebe9e9);
-    box-shadow: 13px 13px 40px #cdcbcb,
-        -13px -13px 40px #ebe9e9;
+    // box-shadow: 13px 13px 40px #cdcbcb,
+    //     -13px -13px 40px #ebe9e9;
     margin: 0.5em;
     padding: 0.5em;
     transition: 0.5s;
@@ -423,8 +427,8 @@ main-menu {
 
 .card:hover {
     border-radius: 50px;
-    background: linear-gradient(145deg, #faf6f6, #d3cfcf);
-    box-shadow: 18px 18px 100px #a6a3a3,
+    // background: linear-gradient(145deg, #faf6f6, #d3cfcf);
+    box-shadow: 9px 9px 50px #a6a3a3,
         -18px -18px 100px #ffffff;
 }
 

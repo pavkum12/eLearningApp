@@ -4,7 +4,8 @@ const Admin = require('../model/admin')
 const jwt = require('jsonwebtoken');
 const { Mongoose } = require('mongoose');
 const Course = require('../model/course');
-const Update = require('../model/update')
+const Update = require('../model/update');
+const update = require('../model/update');
 
 // controller for register
 exports.registerUser = async (req, res) => {
@@ -130,12 +131,14 @@ exports.delete = async (req, res) => {
 
 exports.addCourse = (req, res) => {
     try {
-        const { title, description, category } = req.body
+        const { title, description, category, imageUrl, fileUrl } = req.body
 
         const addcourse = new Course({
             title,
             description,
-            category
+            category,
+            imageUrl,
+            fileUrl
         });
 
         addcourse.save(addcourse)
@@ -178,6 +181,20 @@ exports.getCourse = (req, res) => {
                 res.status(406).json({ msg: "No courses available" })
             }
             res.json({ courseList: course });
+        })
+
+    } catch (error) {
+        res.status(500).json({ error: error || "Cant get Courses" })
+    }
+}
+
+exports.getUpdate = (req, res) => {
+    try {
+        update.find().then(update => {
+            if (!update) {
+                res.status(406).json({ msg: "No courses available" })
+            }
+            res.json({ updateList: update });
         })
 
     } catch (error) {

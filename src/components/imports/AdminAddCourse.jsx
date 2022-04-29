@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 
 export default function AdminAddCourse(props) {
 
-    let { handleSubmit, setTitle, setDescription, setCategory } = props.courseContent;
+
+
+
+
+    let { handleSubmit, setTitle, setDescription, setCategory, setSelectedimage, setFile } = props.courseContent;
 
     return (
         <div className="container add-cource ">
             <form onSubmit={handleSubmit} method='POST'>
                 <div className="form-group">
                     <label htmlFor="title">Course Title</label>
-                    <input type="text" name="title" id="title" className="form-control input-text" onChange={e => setTitle(e.target.value)} />
+                    <input type="text" name="title" id="title" className="form-control input-text" required onChange={e => setTitle(e.target.value)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Course Description</label>
@@ -20,6 +25,7 @@ export default function AdminAddCourse(props) {
                         id="description"
                         cols="30"
                         rows="5"
+                        required
                         onChange={e => setDescription(e.target.value)}
                     ></textarea>
                 </div>
@@ -41,6 +47,20 @@ export default function AdminAddCourse(props) {
                         id="notes"
                         className="form-control input-text"
                         accept=".pdf"
+                        onChange={e => setFile(e.target.files[0])}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="image">Add Image</label>
+                    <input
+                        type="file"
+                        name="notes"
+                        id="notes"
+                        className="form-control input-text"
+                        accept="image/*"
+                        onChange={e => setSelectedimage(e.target.files[0])}
+                        required
                     />
                 </div>
                 <input type="submit" value="Add Course" className="btn btn-add-cource" />

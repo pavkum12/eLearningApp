@@ -37,7 +37,7 @@ export default function Home() {
                     <Link className="nav-brand" to="/News">
                         <button className="menu-button" id="button2">News</button>
                     </Link>
-                    <Link className="nav-brand" to="/Updates">
+                    <Link className="nav-brand" to="/Update">
                         <button className="menu-button " id="button3">Updates</button>
                     </Link>
                 </div>

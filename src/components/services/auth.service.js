@@ -88,6 +88,16 @@ const getCourseFunction = async () => {
             return Promise.reject(error.response.data)
         })
 }
+const getUpdateFunction = async () => {
+    return axios.get(`${baseURL}/getUpdate`)
+        .then(response => {
+            return Promise.resolve(response.data)
+        }).catch(error => {
+            console.log(`Service error ->> ${error}`);
+            return Promise.reject(error.response.data)
+        })
+}
+
 
 export {
     register,
@@ -97,5 +107,6 @@ export {
     addCourseFunction,
     getCourseFunction,
     addUpdateFunction,
+    getUpdateFunction,
 }
 

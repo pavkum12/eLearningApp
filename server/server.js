@@ -35,7 +35,7 @@ app.delete('/api/delete', auth, controller.delete);
 app.post('/api/addCourse', controller.addCourse);
 app.get('/api/getCourse', controller.getCourse);
 app.post('/api/addUpdate', controller.addUpdate);
-
+app.get('/api/getUpdate', controller.getUpdate);
 
 
 app.listen(PORT, () => {
