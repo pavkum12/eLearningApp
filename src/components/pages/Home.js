@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-
-
+import TodoList from '../pages/TodoList';
 import Header from '../imports/Header';
 import { useSelector } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
@@ -40,6 +39,9 @@ export default function Home() {
                     <Link className="nav-brand" to="/Update">
                         <button className="menu-button " id="button3">Updates</button>
                     </Link>
+                </div>
+                <div>
+                    <TodoList></TodoList>
                 </div>
             </main>
         </>

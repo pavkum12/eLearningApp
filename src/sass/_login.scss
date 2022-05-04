@@ -329,6 +329,17 @@ main-menu {
     .add-update #title {
         width: 45vw;
     }
+
+    .body1 {
+        width: 65vw;
+        margin-left: 15em;
+    }
+
+    .todo-form {
+        margin-left: 15em;
+    }
+
+
 }
 
 .add-cource {
@@ -453,4 +464,144 @@ main-menu {
 .card-footer a {
     text-decoration: none;
     color: #ffffff;
+}
+
+.body1 {
+    border-radius: 50px;
+    background: rgb(0, 250, 255);
+    background: linear-gradient(180deg, rgba(0, 1, 198, 0.3) 0%, rgba(255, 0, 27, 0.3) 100%), url(https://www.psychologies.co.uk/wp-content/uploads/sites/3/2019/06/To-do_list-1-scaled.jpg?resize=1200,750);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 19px 19px 39px #bebebe,
+        -19px -19px 39px #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    padding: 1em;
+    margin-bottom: 5em;
+
+}
+
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    background: #161a2b;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+
+}
+
+h1 {
+    margin: 32px 0;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+
+}
+
+.todo-form {
+    margin-bottom: 32px;
+
+}
+
+.todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid white;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+
+
+}
+
+.todo-input::placeholder {
+    color: white;
+}
+
+.todo-button {
+    padding: 14px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    // outline: none;
+    background: linear-gradient(41deg, rgba(178, 126, 213, 0.5) 0%, rgba(142, 156, 204, 0.5) 22%, rgba(50, 223, 186, 0.5) 77%, rgba(121, 191, 255, 0.5) 100%);
+    color: #fff;
+    text-transform: capitalize;
+    border: 2px solid white;
+}
+
+.todo-button:hover {
+    background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+}
+
+.todo-input.edit {
+    border: 2px solid white;
+
+}
+
+.todo-button.edit {
+    background: linear-gradient(41deg, rgba(178, 126, 213, 1) 0%, rgba(142, 156, 204, 1) 22%, rgba(50, 223, 186, 1) 77%, rgba(121, 191, 255, 1) 100%);
+    padding: 14px 22px;
+}
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(90deg,
+            rgba(255, 118, 20, 0.7) 0%,
+            rgba(255, 84, 17, 0.7) 100%);
+
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+    background: linear-gradient(90deg,
+            rgba(93, 12, 255, 0.7) 0%,
+            rgba(155, 0, 250, 0.7) 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+    background: linear-gradient(90deg,
+            rgba(255, 12, 241, 0.7) 0%,
+            rgba(250, 0, 135, 0.7) 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+    background: linear-gradient(90deg,
+            rgba(20, 159, 255, 0.7) 0%,
+            rgba(17, 122, 255, 0.7) 100%);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.delete-icon {
+    margin-right: 5px;
+    color: #fff;
+}
+
+.edit-icon {
+    color: #fff;
 }
