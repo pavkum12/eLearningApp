@@ -7,3 +7,6 @@ export const ADDCOURSE = "ADDCOURSE";
 export const GETCOURSE = "GETCOURSE";
 export const ADDUPDATE = "ADDUPDATE";
 export const GETUPDATE = "GETUPDATE";
+export const ADDQUESTION = "ADDQUESTION";
+export const GETQUESTION = "GETQUESTION";
+export const ADDADMIN = "ADDADMIN";
