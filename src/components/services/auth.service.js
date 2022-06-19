@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://localhost:4000/api";
+const baseURL = "/api";
 
 // register request
 const register = (newUser) => {
