@@ -14,9 +14,8 @@ const Home0 = () => {
       <Navbar />
       <Hero />
       <Features />
-      <Content {...heroOne} />
-      <Content {...heroTwo} />
-      <Content {...heroThree} />
+      {/* <Content {...heroTwo} />
+      <Content {...heroThree} /> */}
       <Carousel />
     </>
   );

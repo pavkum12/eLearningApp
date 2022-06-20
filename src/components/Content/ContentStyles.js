@@ -54,8 +54,9 @@ export const ImgWrapper = styled(motion.div)`
   max-height: 700px;
   justify-content: center;
   position: relative;
+  
 `;
-
+//url: "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121002887/original/9f2174ec1236e128859a8ad2ff98a5a21a0230b7/sdwdwdwwqwfhijwwfwefh-eif-wehfiwehf-i-hwei.jpg";
 export const TopLine = styled(motion.div)`
   font-size: 0.9rem;
   line-height: 16px;
@@ -74,6 +75,7 @@ export const Img = styled(motion.img)`
   object-fit: cover;
   max-height: 700px;
   z-index: 1;
+  
 `;
 
 export const Heading = styled(motion.h2)`

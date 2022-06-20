@@ -29,18 +29,6 @@ export const featuresData = [
     imgClass: "three",
   },
   {
-    name: "24/7 Support",
-    description: "Our team is available at all times in case you need us",
-    icon: iconStyle(BiSupport),
-    imgClass: "four",
-  },
-  {
-    name: "Price",
-    description: "We offer the highest value/cost ratio",
-    icon: iconStyle(BiDollar),
-    imgClass: "five",
-  },
-  {
     name: "Scalable",
     description:
       "Our servers are located all over the world, therefore improving scalability and speed ",

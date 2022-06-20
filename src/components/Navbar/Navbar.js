@@ -47,7 +47,7 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           {/* <NavLogo to="/">
-            E-learning Platform
+           UTrain
           </NavLogo> */}
           <MobileIcon onClick={handleClick}>
             {show ? <FaTimes /> : <CgMenuRight />}

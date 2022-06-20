@@ -1,4 +1,5 @@
 import React from "react";
+import bgImage from "../Hero/hero.mp4";
 import { Link } from "react-router-dom";
 import { Button, Container, MainHeading } from "../../globalStyles";
 import {
@@ -12,11 +13,11 @@ import {
 const Hero = () => {
   return (
     <HeroSection>
-      <HeroVideo src="./assets/hero.mp4" autoPlay muted />
+      <HeroVideo src={bgImage} type="video/mp4" autoPlay loop muted></HeroVideo>
       <Container>
-        <MainHeading>Your data is secure with us</MainHeading>
+        <MainHeading>E-Learning content for civil exam aspirants</MainHeading>
         <HeroText>
-          We provide the best security systems for clients all over the world
+          We provide the best content for civil exam all over the india.
         </HeroText>
         <ButtonWrapper>
           <Link to="/Login">

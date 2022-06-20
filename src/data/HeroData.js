@@ -1,18 +1,3 @@
-export const heroOne = {
-  reverse: true,
-  inverse: true,
-  topLine: {
-    text: "Founded in 2012",
-  },
-  headline: "We've been in business for 9 years",
-  description:
-    "We have designed and implemented the best cloud security solutions",
-  buttonLabel: "Find More",
-  imgStart: "start",
-  img: "./assets/svg/Deal.svg",
-  start: "true",
-};
-
 export const heroTwo = {
   reverse: false,
   inverse: false,
@@ -25,7 +10,7 @@ export const heroTwo = {
 
   linkTo: "/more",
   imgStart: "start",
-  img: "./assets/svg/Connection.svg",
+  img: "../assets/image.png",
   start: "true",
 };
 

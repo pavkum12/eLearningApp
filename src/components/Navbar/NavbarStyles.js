@@ -76,7 +76,13 @@ export const NavMenu = styled.ul`
     visibility: ${({ show }) => (show ? "visible" : "hidden")};
     transform: translateY(${({ show }) => (show ? "0" : "-10px")});
     transition: opacity 0.5s ease;
-    background-color: #071c2f;
+    background: linear-gradient(
+      41deg,
+      rgba(178, 126, 213, 0.9) 0%,
+      rgba(142, 156, 204, 0.9) 22%,
+      rgba(50, 223, 186, 0.9) 77%,
+      rgba(121, 191, 255, 0.9) 100%
+    );
   }
 
   > li:first-child {
@@ -117,7 +123,6 @@ export const NavLinks = styled.span`
     display: table;
 
     &:hover {
-      color: #4b59f7;
       transition: all 0.3s ease;
     }
   }

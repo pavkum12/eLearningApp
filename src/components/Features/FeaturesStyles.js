@@ -4,24 +4,22 @@ import { motion } from "framer-motion";
 export const FeatureTitle = styled.h2`
   text-align: center;
   font-size: clamp(1.3rem, 13vw, 3.1rem);
-  line-height: 1.06;
   letter-spacing: 0.4rem;
-  margin: auto;
+  margin-top: 0rem;
 `;
 
 export const FeatureTextWrapper = styled.div`
   position: relative;
   padding: 0 0 20px;
-  margin-bottom: 4rem;
 `;
 
 export const FeatureWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 4rem;
-  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+  grid-gap: 4rem;
   @media screen and (max-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 3rem;
   }
   @media screen and (max-width: 568px) {

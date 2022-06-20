@@ -7,13 +7,20 @@ export const HeroSection = styled.section`
   background-size: cover;
   padding-top: clamp(70px, 25vh, 220px);
   box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
+  background: rgb(178, 126, 213);
+  background: linear-gradient(
+    41deg,
+    rgba(178, 126, 213, 0.5) 0%,
+    rgba(142, 156, 204, 0.5) 22%,
+    rgba(50, 223, 186, 0.5) 77%,
+    rgba(121, 191, 255, 0.5) 100%
+  );
 `;
 
 export const HeroVideo = styled.video`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
   top: 0;
   position: absolute;
   z-index: -1;
