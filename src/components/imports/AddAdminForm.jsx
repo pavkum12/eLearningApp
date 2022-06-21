@@ -15,7 +15,7 @@ export default function AddAdminFormForm(props) {
     <div className="col-sm-7 bg-color align-self-center">
       <div className="form-section ">
         <div className="title">
-          <h3>Create a new account</h3>
+          <h3>Create a new admin account</h3>
         </div>
         <div className="login-inner-form">
           <form method="POST" onSubmit={handleSubmit}>

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-const baseURL = "http://localhost:4000/api";
+const baseURL = "/api";
 
 class RemoveCourse extends React.Component {
   state = {

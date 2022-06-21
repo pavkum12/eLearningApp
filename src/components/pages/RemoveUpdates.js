@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-const baseURL = "http://localhost:4000/api";
+const baseURL = "/api";
 
 class RemoveUpdates extends React.Component {
   state = {
@@ -72,7 +72,7 @@ class RemoveUpdates extends React.Component {
               <i className="fa-solid fa-square-caret-left text-white"></i>
             </Link>
             <h4 className="text-white mx-auto">
-              Here is the UPSE Updates available
+              Here is the UPSC Updates available
             </h4>
           </nav>
         </header>

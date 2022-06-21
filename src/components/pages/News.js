@@ -25,8 +25,8 @@ export default class News extends React.Component {
     const cureDate = date.getFullYear() + "-" + month + "-" + date.getDate();
     console.log(cureDate);
     var url =
-      "https://newsapi.org/v2/everything?" +
-      "q=movies&" +
+      "http://newsapi.org/v2/everything?" +
+      "q=politics&" +
       // "country=in&" +
       "from=" +
       cureDate +
@@ -90,7 +90,7 @@ export default class News extends React.Component {
       <div>
         <header>
           <nav className="navbar navbar-expand-lg navbar-light primary-gradient shadow">
-            <Link className="nav-link brand " to="/">
+            <Link className="nav-link brand " to="/Home">
               <i className="fa-solid fa-square-caret-left text-white"></i>
             </Link>
             <h4 className="text-white mx-auto">News</h4>

@@ -18,7 +18,7 @@ const Carousel = () => {
     <Section margin="auto" maxWidth="1280px" padding="50px 70px" inverse>
       <Row justify="space-between" margin="1rem" wrap="wrap">
         <Heading width="auto" inverse>
-          Designed & Developed
+        Testimonials
         </Heading>
         <ButtonContainer>
           <IconContext.Provider value={{ size: "3rem", color: "#1d609c" }}>
@@ -30,15 +30,15 @@ const Carousel = () => {
 
       <ReviewSlider {...sliderSettings} ref={setSliderRef}>
         {data.map((el, index) => (
-          <ImageWrapper key={index}>
-            <CarouselImage src={el.image} />
-            <TextWrapper size="1.1rem" margin="0.4rem 0 0" weight="bold">
+          <ImageWrapper >
+            <TextWrapper size="1.1rem" margin="0.4rem 0 0" weight="bold" >
               {el.title}
             </TextWrapper>
             <TextWrapper size="0.9rem" margin="0.7rem" color="#4f4f4f">
               {el.description}
             </TextWrapper>
           </ImageWrapper>
+          
         ))}
       </ReviewSlider>
     </Section>

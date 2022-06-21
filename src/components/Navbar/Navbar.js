@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   const closeMobileMenu = (to, id) => {
-    if (id && location.pathname === "/") {
+    if (id && location.pathname === "/register") {
       scrollTo(id);
     }
 

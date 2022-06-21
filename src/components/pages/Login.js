@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import BaseLogin from "../imports/BaseLogin";
 import LoginForm from "../imports/LoginForm";
-import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 import { useDispatch, useStore } from "react-redux";
 import { loginAction } from "../../container/actions";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -47,6 +47,8 @@ export default function Login() {
               setError,
             }}
           />
+
+          
         </div>
       </div>
     </div>

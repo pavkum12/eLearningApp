@@ -1,38 +1,35 @@
 import React from "react";
 
-import { BsFillShieldLockFill } from "react-icons/bs";
-import { IoIosOptions } from "react-icons/io";
-import { AiOutlineCloudUpload } from "react-icons/ai";
-import { BiSupport, BiDollar } from "react-icons/bi";
-import { GrHostMaintenance } from "react-icons/gr";
+import { AiTwotoneFileText } from "react-icons/ai";
+import { GiNewspaper } from "react-icons/gi";
+import { GrUpdate } from "react-icons/gr";
+import { BiNews } from "react-icons/bi";
 const iconStyle = (Icon) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const featuresData = [
   {
-    name: "Best Security",
-    description:
-      "We offer the best data security to our clients, which makes us stand out",
-    icon: iconStyle(BsFillShieldLockFill),
+    name: "Best Courses",
+    description: "We offer the best cources, which makes us stand out.",
+    icon: iconStyle(AiTwotoneFileText),
     imgClass: "one",
   },
   {
-    name: "Ease of Use",
-    description: "Our system is easy to use and integrate",
-    icon: iconStyle(IoIosOptions),
+    name: "News",
+    description: "we provide a daily updated news.",
+    icon: iconStyle(GiNewspaper),
     imgClass: "two",
   },
   {
-    name: "Maintenance",
-    description:
-      "Our code is written in highest standards, which makes it highly sustainable",
-    icon: iconStyle(GrHostMaintenance),
+    name: "Question Papers",
+    description: "we provide previous year question papers.",
+    icon: iconStyle(BiNews),
     imgClass: "three",
   },
   {
-    name: "Scalable",
+    name: "Updates",
     description:
-      "Our servers are located all over the world, therefore improving scalability and speed ",
-    icon: iconStyle(AiOutlineCloudUpload),
+      "frequently updates regrading job opportunities and exam updates.",
+    icon: iconStyle(GrUpdate),
     imgClass: "six",
   },
 ];

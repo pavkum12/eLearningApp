@@ -8,7 +8,7 @@ export default function AdminAddUpdate(props) {
       <form onSubmit={handleSubmit} method="POST">
         <div className="form-group">
           <label htmlFor="title"></label>
-          <input
+          <textarea
             type="text"
             name="title"
             id="title"
